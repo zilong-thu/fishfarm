@@ -1,0 +1,67 @@
+@desktop:   ~"screen and (min-width: 768px)";
+@tablet:    ~"screen and (max-width: 767px)";
+
+@import "bootstrap_less/bootstrap.less";
+
+body{
+    font-size: 14px;
+    padding-bottom: 50px;
+    color: #333;
+    font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+}
+
+a{
+    transition: color 0.3s;
+}
+p img{
+    max-width: 100%;
+}
+
+.col-no-padding{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.col-centered{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+}
+
+/* editor */
+#new-topic-container{
+    display: none;
+}
+
+/* text align center */
+.text-center{
+    text-align: center;
+}
+
+
+@green-color: #4A793D;
+
+.green-theme{
+    background-color: @green-color !important;
+    color: #fff !important;
+    border-color: darken(@green-color, 10%);
+
+    hr{
+        border-top-color: darken(@green-color, 10%);
+    }
+}
+
+#index-footer{
+    font-size: 0.9em;
+}
+
+.container-fluid{
+    .big-screen{
+        border-radius: 0;
+        background-size: cover;
+
+        img{
+            width: 100%;
+        }
+    }
+}
