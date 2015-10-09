@@ -12,3 +12,11 @@ npm install
 npm start
 ```
 and the server will be listening on port 8000.
+
+
+Now the website looks like this:
+
+![fish](/tmp/website-shot.jpg)
+
+
+Or you can view it online: [http://121.40.200.98:8000/](http://121.40.200.98:8000/)
