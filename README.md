@@ -13,4 +13,6 @@ npm start
 ```
 and the server will be listening on port 8000.
 
+Now the website looks like this:
+
 ![fish](/tmp/website-shot.jpg)
