@@ -9,7 +9,11 @@
 
 .player-area{
     background: #f6f7fb;
-    padding: 100px 0;
+    padding: 50px 0 100px 0;
+}
+
+video{
+    cursor: pointer;
 }
 
 .video-player-wrap{
@@ -52,7 +56,9 @@
         height: 110px;
         overflow: hidden;
         padding: 5px 10px;
-        border-bottom: 1px solid darken(@video-bg-color, 10%);
+        border-bottom: 1px solid lighten(@video-bg-color, 10%);
+        
+        &.active,
         &:hover{
             cursor: pointer;
             color: #fff;
