@@ -8,46 +8,29 @@ $(function(){
     };
 
     var videoList = [{
-        title: '视频',
+        title: '视频1：投料',
         img: {
-            src: '/images/slides/fish_01.jpg'
+            src: '/images/thumbnails/video-01.jpg'
         },
         video: {
-            src: ''
+            src: 'http://7xn4yl.com1.z0.glb.clouddn.com/vid_20150804_112223.m4v'
         }
     }, {
-        title: '视频',
+        title: '视频2：进食中的观赏鱼',
         img: {
-            src: '/images/slides/fish_01.jpg'
+            src: '/images/thumbnails/video-02.jpg'
         },
         video: {
-            src: ''
-        }
-    }, {
-        title: '视频',
-        img: {
-            src: '/images/slides/fish_01.jpg'
-        },
-        video: {
-            src: ''
-        }
-    }, {
-        title: '视频',
-        img: {
-            src: '/images/slides/fish_01.jpg'
-        },
-        video: {
-            src: ''
-        }
-    }, {
-        title: '视频',
-        img: {
-            src: '/images/slides/fish_01.jpg'
-        },
-        video: {
-            src: ''
+            src: 'http://7xn4yl.com1.z0.glb.clouddn.com/vid_20150928_105055.m4v'
         }
     }];
 
     util.renderView({videoList: videoList}, '#tpl-video-list', '#video-list-container');
+
+    $('#video-list-container').delegate('.item-pre', 'click', function(event){
+        var _self = $(this);
+        var src = _self.data('videosrc');
+
+        $('#main-video-player').attr('src', src);
+    });
 });

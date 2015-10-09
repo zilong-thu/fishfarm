@@ -1,7 +1,7 @@
 <script type="text/template" id="tpl-video-list">
-<h3>视频列表</h3>
+<div class="video-list-title">视频列表</div>
 <% for(var i=0; i<videoList.length; i++){  var item = videoList[i]; %>
-    <div class="item-pre" data-presrc="item.img.src">
+    <div class="item-pre" data-presrc="<%= item.img.src %>" data-videosrc="<%= item.video.src %>">
         <img src="<%= item.img.src %>">
         <div class="description">
             <%= item.title %>
