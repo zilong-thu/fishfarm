@@ -8,7 +8,6 @@
 
 body{
     font-size: 14px;
-    padding-bottom: 50px;
     color: #333;
     font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
 }
@@ -43,10 +42,25 @@ p img{
 
 
 @green-color: #4A793D;
+.bg-1{
+    background-image: url(/images/background/bg_01.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.bg-2{
+    background-image: url(/images/background/bg_02.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
 
 .green-theme{
     background-color: @green-color !important;
+
+    padding-top: 150px;
+    padding-bottom: 150px;
+
     color: #fff !important;
+    text-shadow: 0 1px 5px #333;
     border-color: darken(@green-color, 10%);
 
     hr{

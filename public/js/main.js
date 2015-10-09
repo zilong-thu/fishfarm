@@ -68,7 +68,13 @@ $(function(){
             domObj.video.play();
             domObj.isPlaying = true;
         }
-        
+    });
+
+    /** 
+     * 播放器组件, 视频结束时
+    **/
+    $(domObj.video).on('ended', function(event){
+        domObj.isPlaying = false;
     });
 
 });
