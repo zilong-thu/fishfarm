@@ -1,0 +1,11 @@
+<script type="text/template" id="tpl-video-list">
+<h3>视频列表</h3>
+<% for(var i=0; i<videoList.length; i++){  var item = videoList[i]; %>
+    <div class="item-pre" data-presrc="item.img.src">
+        <img src="<%= item.img.src %>">
+        <div class="description">
+            <%= item.title %>
+        </div>
+    </div>
+<% } %>
+</script>

@@ -1,0 +1,57 @@
+.full-box{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.video-player-wrap{
+    position: relative;
+    height: 430px;
+    background: #3a3a3a;
+    color: #fff;
+
+    .video-player{
+        .full-box();
+        width: 67%;
+        left: 0;
+    }
+
+    .video-list{
+        .full-box();
+        width: 33%;
+        right: 0;
+        padding: 10px;
+        overflow-y: auto;
+    }
+
+    .video-list-title{
+        position: absolute;
+        top: 0;
+        height: 30px;
+        left: 0;
+        right: 0;
+    }
+
+    video{
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+
+    .item-pre{
+        height: 110px;
+        overflow: hidden;
+
+        img{
+            float: left;
+            max-width: 150px;
+            height: 100px;
+        }
+
+        .description{
+            float: left;
+            padding-left: 10px;
+        }
+    }
+}

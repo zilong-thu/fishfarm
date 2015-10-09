@@ -1,0 +1,22 @@
+/**
+ * vertical-align: 父元素
+ * vertical-align-middle: 要居中的元素
+ */
+
+.vertical-align{
+    font-size: 0;
+
+    &:before{
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+.vertical-align-middle{
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 1rem;
+    max-width: 100%;
+}
