@@ -12,3 +12,5 @@ npm install
 npm start
 ```
 and the server will be listening on port 8000.
+
+![fish](/tmp/website-shot.jpg)
