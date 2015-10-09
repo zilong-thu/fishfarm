@@ -16,10 +16,6 @@
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
-
-  @media (min-width: @grid-float-breakpoint) {
-    border-radius: @navbar-border-radius;
-  }
 }
 
 
@@ -128,10 +124,6 @@
 .navbar-static-top {
   z-index: @zindex-navbar;
   border-width: 0 0 1px;
-
-  @media (min-width: @grid-float-breakpoint) {
-    border-radius: 0;
-  }
 }
 
 // Fix the top/bottom navbars when screen real estate supports it
@@ -141,11 +133,6 @@
   right: 0;
   left: 0;
   z-index: @zindex-navbar-fixed;
-
-  // Undo the rounded corners
-  @media (min-width: @grid-float-breakpoint) {
-    border-radius: 0;
-  }
 }
 .navbar-fixed-top {
   top: 0;
