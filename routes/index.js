@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var auth   = require('../modules/auth.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,6 +14,18 @@ router.get('/blogs', function(req, res, next) {
   res.render('blogs', {
   	activeNav: 'blogs'
   });
+});
+
+router.get('/login', function(req, res, next){
+    res.render('login');
+});
+
+router.post('/login', function(req, res, next){
+    
+});
+
+router.get('/admin', auth.requiredAuthentication, function(req, res, next){
+    res.render('login');
 });
 
 module.exports = router;
