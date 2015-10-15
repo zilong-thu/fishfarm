@@ -29,6 +29,14 @@ $(function(){
         poster: {
             src: ''
         }
+    }, {
+        title: '视频3：草金鱼',
+        img: {
+            src: '/images/thumbnails/video-03.jpg'
+        },
+        video: {
+            src: 'http://7xn4yl.com1.z0.glb.clouddn.com/vid_20150928_105801.m4v'
+        }
     }];
 
     util.renderView({videoList: videoList}, '#tpl-video-list', '#video-list-container');
