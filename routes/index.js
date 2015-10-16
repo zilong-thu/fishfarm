@@ -21,11 +21,16 @@ router.get('/login', function(req, res, next){
 });
 
 router.post('/login', function(req, res, next){
-    
+    var username = req.body.username;
+    var password = req.body.password;
+
+    res.redirect('/admin');
 });
 
-router.get('/admin', auth.requiredAuthentication, function(req, res, next){
-    res.render('login');
+
+//, auth.requiredAuthentication
+router.get('/admin', function(req, res, next){
+    res.render('admin');
 });
 
 module.exports = router;
