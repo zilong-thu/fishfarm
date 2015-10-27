@@ -12,7 +12,34 @@ router.get('/', function(req, res, next) {
 
 router.get('/blogs', function(req, res, next) {
   res.render('blogs', {
-  	activeNav: 'blogs'
+  	activeNav: 'blogs',
+    blogs: [{
+      title: '购买须知',
+      createdAt: '2015-08-04'
+    }, {
+      title: '金鱼',
+      createdAt: '2015-08-04'
+    },{
+      title: '草金鱼',
+      createdAt: '2015-08-04'
+    },{
+      title: '观赏鱼小知识',
+      createdAt: '2015-08-04'
+    },{
+      title: '水产良种场简介',
+      createdAt: '2015-08-04'
+    },]
+  });
+});
+
+router.get('/blog/:id', function(req, res, next){
+  res.render('blog', {
+    activeNav: 'blogs',
+    blog: {
+      title: '文章标题',
+      content: 'content',
+      createdAt: '2015-10-09 14:20'
+    }
   });
 });
 
