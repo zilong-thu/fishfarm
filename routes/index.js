@@ -2,6 +2,28 @@ var express = require('express');
 var router = express.Router();
 var auth   = require('../modules/auth.js');
 
+var blogs = [{
+      id: 1,
+      title: '购买须知',
+      createdAt: '2015-08-04'
+    }, {
+      id: 2,
+      title: '金鱼',
+      createdAt: '2015-08-04'
+    },{
+      id: 3,
+      title: '草金鱼',
+      createdAt: '2015-08-04'
+    },{
+      id: 4,
+      title: '观赏鱼小知识',
+      createdAt: '2015-08-04'
+    },{
+      id: 5,
+      title: '水产良种场简介',
+      createdAt: '2015-08-04'
+    }];
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { 
@@ -13,33 +35,15 @@ router.get('/', function(req, res, next) {
 router.get('/blogs', function(req, res, next) {
   res.render('blogs', {
   	activeNav: 'blogs',
-    blogs: [{
-      title: '购买须知',
-      createdAt: '2015-08-04'
-    }, {
-      title: '金鱼',
-      createdAt: '2015-08-04'
-    },{
-      title: '草金鱼',
-      createdAt: '2015-08-04'
-    },{
-      title: '观赏鱼小知识',
-      createdAt: '2015-08-04'
-    },{
-      title: '水产良种场简介',
-      createdAt: '2015-08-04'
-    },]
+    blogs: blogs
   });
 });
 
-router.get('/blog/:id', function(req, res, next){
+router.get('/blogs/:id', function(req, res, next){
+  var id = req.params.id;
+
   res.render('blog', {
-    activeNav: 'blogs',
-    blog: {
-      title: '文章标题',
-      content: 'content',
-      createdAt: '2015-10-09 14:20'
-    }
+    blog: blogs[id-1]
   });
 });
 
